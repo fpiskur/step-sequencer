@@ -1,0 +1,33 @@
+#root {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: transform .06s ease-in;
+    transform-origin: bottom;
+}
+
+.circleWrap:not(:last-child) {
+    margin-right: 2px;
+}
+
+.circle.active {
+    transform: scale(0.5, 2);
+}
+
+.circleWrap.step::after {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    bottom: -10px;
+}
