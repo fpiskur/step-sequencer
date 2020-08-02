@@ -31,3 +31,49 @@
     position: relative;
     bottom: -10px;
 }
+
+.stepCircle {
+    background:#C0392B;
+    position:relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width:30px;
+    height:30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+
+.stepCircle:checked {
+    background:#E74C3C;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+
+.stepCircle:checked:after {
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    background:transparent;
+}
+
+.stepCircle:after {
+    position:absolute;
+    top:5px;
+    left:5px;
+    width:20px;
+    height:20px;
+    background:#fff;
+    content:"";
+    -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+            border-radius: 50%;
+}
+
+.stepCircle:hover {
+    background:#E74C3C;
+}
