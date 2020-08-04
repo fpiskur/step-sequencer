@@ -4,23 +4,11 @@
     justify-content: center;
 }
 
-.circle {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    transition: transform .06s ease-in;
-    transform-origin: bottom;
-}
-
-.circleWrap:not(:last-child) {
+.circleWrapper:not(:last-child) {
     margin-right: 2px;
 }
 
-.circle.active {
-    transform: scale(0.5, 2);
-}
-
-.circleWrap.step::after {
+.circleWrapper.step::after {
     content: '';
     display: block;
     width: 7px;
@@ -32,7 +20,49 @@
     bottom: -10px;
 }
 
-.stepCircle {
+.circle {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: transform .06s ease-in;
+    transform-origin: bottom;
+}
+
+.circle:checked {
+    background: #E74C3C;
+    transition: all .1s ease-in-out, transform .06s ease-in;
+}
+
+.circle.active {
+    transform: scale(0.5, 2);
+}
+
+.circle:checked:after {
+    transition: all .1s ease-in-out, transform .06s ease-in;
+    background: transparent;
+}
+
+.circle:after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    content: "";
+    -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+            border-radius: 50%;
+}
+
+.circle:hover {
+    background: #E74C3C;
+}
+
+/* .stepCircle {
     background:#C0392B;
     position:relative;
     -webkit-appearance: none;
@@ -45,23 +75,23 @@
     transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
-}
+} */
 
-.stepCircle:checked {
+/* .stepCircle:checked {
     background:#E74C3C;
     transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
-}
+} */
 
-.stepCircle:checked:after {
+/* .stepCircle:checked:after {
     transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     background:transparent;
-}
+} */
 
-.stepCircle:after {
+/* .stepCircle:after {
     position:absolute;
     top:5px;
     left:5px;
@@ -76,4 +106,4 @@
 
 .stepCircle:hover {
     background:#E74C3C;
-}
+} */
